@@ -1,7 +1,7 @@
 var change;
 
 change = function() {
-  return $("#content").html("CoffeeScript is fun.");
+  return $("#content").html("CoffeeScript is fun!");
 };
 
 /*!
