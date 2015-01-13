@@ -1,6 +1,7 @@
 body {
   background-image: url("../images/mountain.pic");
   background-repeat: no-repeat;
+  background-size: 100%;
   color: #434343;
 }
 body h1 {
