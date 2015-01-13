@@ -8,3 +8,23 @@ body {
 body h1 {
   color: #333;
 }
+#master {
+  *zoom: 1;
+  width: auto;
+  max-width: 1440px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  background: rgba(10,10,10,0.1);
+}
+#master:before,
+#master:after {
+  content: '';
+  display: table;
+}
+#master:after {
+  clear: both;
+}
