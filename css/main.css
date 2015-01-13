@@ -18,7 +18,7 @@ body h1 {
   margin-left: auto;
   padding-left: 0;
   padding-right: 0;
-  background: rgba(10,10,10,0.1);
+  background: rgba(10,10,10,0.9);
 }
 #master:before,
 #master:after {
