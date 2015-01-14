@@ -31,3 +31,6 @@ body h1 {
 #master:after {
   clear: both;
 }
+button {
+  margin: 10px;
+}
