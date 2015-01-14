@@ -7,6 +7,7 @@ body {
 }
 body h1 {
   color: #333;
+  font-size: 130%;
 }
 #master {
   *zoom: 1;
