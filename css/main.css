@@ -191,8 +191,8 @@ body h1 {
   clear: both;
 }
 .mainHeader .menu .menuItem:first-child {
-  border-radius-top-left: 20px;
-  border-radius-top-right: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   border-left: 5px solid #222;
 }
 button {
