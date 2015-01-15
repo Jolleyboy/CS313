@@ -33,6 +33,10 @@ body h1 {
 .master:after {
   clear: both;
 }
+.header .topbar {
+  height: 30px;
+  width: 100%;
+}
 button {
   margin: 10px;
   font-size: 13px;
