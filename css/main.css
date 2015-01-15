@@ -119,6 +119,7 @@ body h1 {
   clear: both;
 }
 .mainHeader .menu .menuItem {
+  display: block;
   border: none;
   text-decoration: none;
   color: initial;
