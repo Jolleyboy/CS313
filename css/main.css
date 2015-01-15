@@ -181,6 +181,7 @@ ul li {
   border: 1px solid #ff851b;
   height: 30px;
   width: 150px;
+  float: left;
 }
 ul:hover li {
   display: inline-block;
