@@ -33,7 +33,7 @@ body h1 {
 .master:after {
   clear: both;
 }
-.header .topbar {
+.mainHeader .topbar {
   height: 30px;
   width: 100%;
 }
