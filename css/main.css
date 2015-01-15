@@ -172,6 +172,8 @@ ul li {
   list-style-type: none;
   background: #222;
   border: 1px solid #ff851b;
+  padding: 6px 20px;
+  width: 100px;
 }
 ul:hover li {
   display: inline-block;
