@@ -95,7 +95,6 @@ body h1 {
   padding: 26px;
   text-align: center;
   border-right: 5px solid #222;
-  border-left: 5px solid #222;
   font-weight: bold;
   background: #add8e6;
 }
@@ -117,6 +116,9 @@ body h1 {
 }
 .mainHeader .menu .menuItem:after {
   clear: both;
+}
+.mainHeader .menu .menuItem:hover {
+  border-right: 5px solid #222;
 }
 .mainHeader .menu .menuItem:first-child {
   border-top-left-radius: 20px;
