@@ -163,7 +163,7 @@ button:active {
 }
 ul {
   border: 1px solid #ff851b;
-  padding: 20px;
+  padding: 2px 20px;
   width: 100px;
 }
 ul li {
