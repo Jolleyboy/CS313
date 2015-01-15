@@ -116,7 +116,6 @@ body h1 {
 .mainHeader .menu .menuItem:after {
   clear: both;
 }
-.mainHeader .menu .menuItem:first-child,
 .mainHeader .menu .menuItem:last-child {
   border-right: none;
 }
