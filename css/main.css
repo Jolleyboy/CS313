@@ -116,11 +116,7 @@ body h1 {
 .mainHeader .menu .menuItem:after {
   clear: both;
 }
-.mainHeader .menu .menuItem:first-child {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-left: 5px solid #222;
-}
+.mainHeader .menu .menuItem:first-child,
 .mainHeader .menu .menuItem:last-child {
   border-right: none;
 }
