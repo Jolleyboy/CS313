@@ -175,7 +175,7 @@ ul li {
   padding: 6px 20px;
   width: 100px;
   position: relative;
-  float: left;
+  left: 0px;
 }
 ul:hover li {
   display: inline-block;
