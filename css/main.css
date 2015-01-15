@@ -162,8 +162,9 @@ button:active {
   background-color: #0068c3;
 }
 ul {
+  text-align: center;
   border: 1px solid #ff851b;
-  padding: 5px 20px;
+  padding: 6px 20px;
   width: 100px;
 }
 ul li {
