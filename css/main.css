@@ -99,7 +99,7 @@ html {
 }
 * {
   box-sizing: inherit;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 }
 body {
   margin: 0;
@@ -218,3 +218,4 @@ button:active {
 button:hover li {
   display: inline-block;
 }
+
