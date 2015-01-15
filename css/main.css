@@ -33,9 +33,10 @@ body h1 {
 .master:after {
   clear: both;
 }
-.mainHeader .topbar {
+.topbar {
   height: 30px;
   width: 100%;
+  background: #222;
 }
 button {
   margin: 10px;
