@@ -171,15 +171,15 @@ button:active {
 ul {
   text-align: center;
   border: 1px solid #ff851b;
-  padding: 6px 20px;
   width: 150px;
+  height: 40px;
 }
 ul li {
   display: none;
   list-style-type: none;
   background: #222;
   border: 1px solid #ff851b;
-  padding: 6px 20px;
+  height: 40px;
   width: 150px;
   position: relative;
   left: -21px;
