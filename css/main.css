@@ -89,18 +89,16 @@ td {
 a img {
   border: none;
 }
-html {
-  margin: 0;
-  padding: 0;
-}
+html,
 body {
   margin: 0;
   background: #222;
   background-image: url("../images/mountains.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  color: #434343;
+  color: #fafafa;
 }
+html h1,
 body h1 {
   color: #333;
   font-size: 275%;
