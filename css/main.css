@@ -34,7 +34,7 @@ body h1 {
   clear: both;
 }
 .mainHeader {
-  width: 100px;
+  width: 100%;
 }
 .mainHeader .topbar {
   height: 30px;
