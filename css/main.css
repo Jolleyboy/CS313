@@ -180,7 +180,6 @@ body h1 {
   text-align: center;
   border: 5px solid #222;
   border-left: none;
-  border-radius: 20px;
 }
 .mainHeader .menu .menuItem:before,
 .mainHeader .menu .menuItem:after {
