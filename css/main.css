@@ -194,6 +194,10 @@ body h1 {
   border-bottom-left-radius: 20px;
   border-left: 5px solid #222;
 }
+.mainHeader .menu .menuItem:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 button {
   margin: 10px;
   font-size: 13px;
