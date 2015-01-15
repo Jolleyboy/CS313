@@ -144,6 +144,30 @@ body h1 {
   background: #222;
   border-bottom: 2px solid #000;
 }
+.mainHeader .menu {
+  width: 500px;
+  height: 100px;
+}
+.mainHeader .menu .menuItem {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.3333333333333%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.mainHeader .menu .menuItem:before,
+.mainHeader .menu .menuItem:after {
+  content: '';
+  display: table;
+}
+.mainHeader .menu .menuItem:after {
+  clear: both;
+}
+.mainHeader .menu .menuItem:last-child {
+  margin-right: 0%;
+}
 button {
   margin: 10px;
   font-size: 13px;
