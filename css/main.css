@@ -1,6 +1,19 @@
 * {
   background: rgba(34,34,34,0.05);
 }
+a {
+  border: none;
+  text-decoration: none;
+  color: initial;
+}
+a:hover {
+  border: none;
+  text-decoration: none;
+  color: initial;
+}
+a:visited {
+  opacity: 1;
+}
 html {
   margin: 0px;
   padding: 0px;
