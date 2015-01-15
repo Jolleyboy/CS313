@@ -138,7 +138,6 @@ body h1 {
   border-right: 5px solid #222;
   background-image: url("http://i.imgur.com/BiSmXaq.png"), url("http://i.imgur.com/XHuy0NJ.png"), url("http://i.imgur.com/okpRxJU.png");
   font-weight: bold;
-  background: #add8e6;
 }
 .mainHeader .menu .menuItem:hover {
   border: none;
