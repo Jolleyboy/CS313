@@ -169,9 +169,10 @@ ul {
 }
 ul li {
   display: none;
+  list-style-type: none;
   background: #222;
   border: 1px solid #ff851b;
-  padding: 20px;
+  padding: 10px;
   width: 100px;
 }
 ul:hover li {
