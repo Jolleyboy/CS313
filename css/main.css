@@ -124,6 +124,8 @@ body h1 {
 }
 .mainHeader .menu .menuItem:last-child {
   border-right: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 button {
   margin: 10px;
