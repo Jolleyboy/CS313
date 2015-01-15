@@ -176,7 +176,7 @@ ul li {
   width: 100px;
   position: relative;
   left: -20px;
-  top: 10px;
+  top: 8px;
 }
 ul:hover li {
   display: inline-block;
