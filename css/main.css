@@ -153,13 +153,4 @@ button:focus {
 button:active {
   background-color: #0068c3;
 }
-button:hover li {
-  display: inline-block;
-}
-.snow {
-  background-image: url("http://www.wearewebstars.dk/codepen/img/s1.png"), url("http://www.wearewebstars.dk/codepen/img//s2.png"), url("http://www.wearewebstars.dk/codepen/img//s3.png");
-  -webkit-animation: #fffafa 10s linear infinite;
-  -ms-animation: #fffafa 10s linear infinite;
-  animation: #fffafa 10s linear infinite;
-}
 
