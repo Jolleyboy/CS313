@@ -178,6 +178,8 @@ body h1 {
   margin-right: 0%;
   padding: 30px;
   text-align: center;
+  border: 5px solid #222;
+  border-left: none;
 }
 .mainHeader .menu .menuItem:before,
 .mainHeader .menu .menuItem:after {
@@ -190,6 +192,7 @@ body h1 {
 .mainHeader .menu .menuItem:first-child {
   border-radius-top-left: 20px;
   border-radius-top-right: 20px;
+  border-left: brdr;
 }
 button {
   margin: 10px;
