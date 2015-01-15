@@ -172,9 +172,9 @@ body h1 {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 31.3333333333333%;
+  width: 33.3333333333333%;
   margin-left: 0%;
-  margin-right: 3%;
+  margin-right: 0%;
   padding: 30px;
 }
 .mainHeader .menu .menuItem:before,
@@ -184,9 +184,6 @@ body h1 {
 }
 .mainHeader .menu .menuItem:after {
   clear: both;
-}
-.mainHeader .menu .menuItem:last-child {
-  margin-right: 0%;
 }
 .mainHeader .menu .menuItem:first-child {
   border-radius-top-left: 20px;
