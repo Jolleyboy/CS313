@@ -160,3 +160,9 @@ button:focus {
 button:active {
   background-color: #0068c3;
 }
+ul li {
+  display: none;
+}
+ul:hover li {
+  display: block;
+}
