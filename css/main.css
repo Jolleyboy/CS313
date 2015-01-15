@@ -1,25 +1,6 @@
 * {
   background: rgba(34,34,34,0.05);
 }
-a {
-  border: none;
-  text-decoration: none;
-  color: initial;
-  color: #fff;
-  text-decoration: none;
-  transition: all .3s ease;
-}
-a:hover {
-  border: none;
-  text-decoration: none;
-  color: initial;
-}
-a:visited {
-  opacity: 1;
-}
-a:visited {
-  opacity: 0.8;
-}
 html {
   margin: 0px;
   padding: 0px;
@@ -109,6 +90,12 @@ body h1 {
   border: 5px solid #222;
   border-left: none;
   font-weight: bold;
+  border: none;
+  text-decoration: none;
+  color: initial;
+  color: #fff;
+  text-decoration: none;
+  transition: all .3s ease;
 }
 .mainHeader .menu .menuItem:before,
 .mainHeader .menu .menuItem:after {
@@ -117,6 +104,17 @@ body h1 {
 }
 .mainHeader .menu .menuItem:after {
   clear: both;
+}
+.mainHeader .menu .menuItem:hover {
+  border: none;
+  text-decoration: none;
+  color: initial;
+}
+.mainHeader .menu .menuItem:visited {
+  opacity: 1;
+}
+.mainHeader .menu .menuItem:visited {
+  opacity: 0.8;
 }
 .mainHeader .menu .menuItem:first-child {
   border-top-left-radius: 20px;
