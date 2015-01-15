@@ -173,7 +173,7 @@ ul li {
   background: #222;
   border: 1px solid #ff851b;
   padding: 10px;
-  width: 100px;
+  width: 100%;
 }
 ul:hover li {
   display: block;
