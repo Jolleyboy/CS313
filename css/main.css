@@ -175,5 +175,5 @@ ul li {
   width: 200px;
 }
 ul:hover li {
-  display: block;
+  display: inline-block;
 }
