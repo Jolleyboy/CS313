@@ -147,6 +147,7 @@ body h1 {
 .mainHeader .menu {
   width: 500px;
   height: 100px;
+  background: rgba(40,20,255,0.8);
 }
 .mainHeader .menu .menuItem {
   *zoom: 1;
