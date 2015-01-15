@@ -163,6 +163,9 @@ button:active {
 }
 ul li {
   display: none;
+  background: #222;
+  border: 1px solid #ff851b;
+  padding: 20px;
 }
 ul:hover li {
   display: block;
