@@ -1,43 +1,30 @@
 .snow{
-  background-image: url('../images/snow.jpg');
   -webkit-animation: snow 20s linear infinite;
   -moz-animation: snow 20s linear infinite;
   -ms-animation: snow 20s linear infinite;
   animation: snow 20s linear infinite;
 }
 
-@-webkit-keyframes snow {
-    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
-    50% { background-color: #b4cfe0 }
-    100% {
-        background-position: 500px 1000px, 400px 400px, 300px 300px;
-        background-color: #6b92b9;
-    }
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 }
 @-moz-keyframes snow {
-    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
-    50% { background-color: #b4cfe0 }
-    100% {
-        background-position: 500px 1000px, 400px 400px, 300px 300px;
-        background-color: #6b92b9;
-    }
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 }
 @-ms-keyframes snow {
-    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
-    50% { background-color: #b4cfe0 }
-    100% {
-        background-position: 500px 1000px, 400px 400px, 300px 300px;
-        background-color: #6b92b9;
-    }
-}
-@keyframes snow {
-    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
-    50% { background-color: #b4cfe0 }
-    100% {
-        background-position: 500px 1000px, 400px 400px, 300px 300px;
-        background-color: #6b92b9;
-    }
-}
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+} 
 * {
   background: rgba(34,34,34,0.05);
 }
