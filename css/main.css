@@ -172,7 +172,6 @@ ul li {
   list-style-type: none;
   background: #222;
   border: 1px solid #ff851b;
-  width: 200px;
 }
 ul:hover li {
   display: inline-block;
