@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   background: #222;
   background-image: url("../images/mountains.jpg");
   background-repeat: no-repeat;
