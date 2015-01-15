@@ -5,6 +5,9 @@ a {
   border: none;
   text-decoration: none;
   color: initial;
+  color: #fff;
+  text-decoration: none;
+  transition: all .3s ease;
 }
 a:hover {
   border: none;
@@ -13,6 +16,9 @@ a:hover {
 }
 a:visited {
   opacity: 1;
+}
+a:visited {
+  opacity: 0.8;
 }
 html {
   margin: 0px;
