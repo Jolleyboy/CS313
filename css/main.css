@@ -80,6 +80,8 @@ body h1 {
   clear: both;
 }
 .mainHeader {
+  position: relative;
+  z-index: 1;
   width: 100%;
   margin: 0;
 }
