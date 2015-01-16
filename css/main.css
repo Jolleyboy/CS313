@@ -183,6 +183,7 @@ button:active {
   background-color: #0068c3;
 }
 .funny {
+  display: none;
   *zoom: 1;
   width: auto;
   max-width: 1440px;
