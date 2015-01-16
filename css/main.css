@@ -296,6 +296,9 @@ button:active {
   border: 3px solid #949494;
   position: relative;
 }
+.smiley:hover {
+  background: #d3d3d3;
+}
 .smiley .left-eye {
   width: 18%;
   height: 18%;
@@ -305,6 +308,9 @@ button:active {
   left: 22%;
   border-radius: 50%;
   float: left;
+}
+.smiley .left-eye:hover {
+  background: #bebebe;
 }
 .smiley .right-eye {
   width: 18%;
@@ -316,6 +322,9 @@ button:active {
   right: 22%;
   float: right;
 }
+.smiley .right-eye:hover {
+  background: #bebebe;
+}
 .smiley .smile {
   position: absolute;
   top: 67%;
@@ -323,6 +332,9 @@ button:active {
   width: 70%;
   height: 50%;
   overflow: hidden;
+}
+.smiley .smile:hover {
+  background: #bebebe;
 }
 .smiley .smile:after,
 .smiley .smile:before {
@@ -335,10 +347,17 @@ button:active {
   height: 100%;
   width: 97%;
 }
+.smiley .smile:after:hover,
+.smiley .smile:before:hover {
+  background: #bebebe;
+}
 .smiley .smile:after {
   background: #7f7f7f;
   height: 80%;
   top: -40%;
   left: 0%;
+}
+.smiley .smile:after:hover {
+  background: #bebebe;
 }
 
