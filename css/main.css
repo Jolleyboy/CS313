@@ -123,7 +123,7 @@ body h1 {
   padding: 26px;
   text-align: center;
   border-right: 5px solid #222;
-  background: linear-gradient(to bottom, #add8e6, #fff, #add8e6);
+  background: linear-gradient(#add8e6, #fff, #add8e6);
   background-image: url("http://www.wearewebstars.dk/codepen/img/s1.png"), url("http://www.wearewebstars.dk/codepen/img//s2.png"), url("http://www.wearewebstars.dk/codepen/img//s3.png");
   font-weight: bold;
 }
