@@ -1,8 +1,8 @@
-var change;
-
-change = function() {
-  return $("#content").html("CoffeeScript is fun, short, and easy.");
-};
+$(function() {
+  var num;
+  num = Math.floor(Math.randon() * $('.funny').length);
+  return $('.funny:eq(' + num + ')').show();
+});
 
 /*!
  * jQuery JavaScript Library v2.1.3
