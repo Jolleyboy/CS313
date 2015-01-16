@@ -1,9 +1,3 @@
-$(function() {
-  var num;
-  num = Math.floor(Math.randon() * $('.funny').length);
-  return $('.funny:eq(' + num + ')').show();
-});
-
 /*!
  * jQuery JavaScript Library v2.1.3
  * http://jquery.com/
@@ -9209,3 +9203,9 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
+
+$(function() {
+  var num;
+  num = Math.floor(Math.randon() * $('.funny').length);
+  return $('.funny:eq(' + num + ')').show();
+});
