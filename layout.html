@@ -9,17 +9,18 @@
         //-javascript
         var element = document.createElement("script");
         element.src = "js/all.js";
-        //-livereload
-        var e2      = document.createElement("script");
-        e2.src      = 'http://' +(location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1';
-        //-css
-        alert(location.host);
-        var e3      = document.createElement("link");
-        e3.setAttribute("rel","stylesheet");
-        e3.setAttribute("href","css/main.css");
         document.body.appendChild(element);
-        document.body.appendChild(e2);
-        document.head.appendChild(e3);
+        //-css
+        var e2      = document.createElement("link");
+        e2.setAttribute("rel","stylesheet");
+        e2.setAttribute("href","css/main.css");
+        document.head.appendChild(e2);
+        //-livereload
+        if (location.host == "cs313.dev" || location.host == "localhost") {
+          var lr      = document.createElement("script");
+          lr.src      = 'http://' +(location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1';
+          document.body.appendChild(lr);
+        }
       }
       if (window.addEventListener)
         window.addEventListener("load", downloadJSAtOnload, false);
