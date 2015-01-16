@@ -47,6 +47,15 @@ body h1 {
   color: #333334;
   font-size: 275%;
 }
+.lightbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
 .master {
   *zoom: 1;
   width: auto;
