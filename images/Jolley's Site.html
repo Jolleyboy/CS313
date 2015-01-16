@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0017)http://cs313.dev/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Jolley's Site</title>
+    <link rel="stylesheet" href="./Jolley's Site_files/main.css">
+    <script>
+      //-defer javascript/css loading
+      function downloadJSAtOnload() {
+        //-javascript
+        var element = document.createElement("script");
+        element.src = "js/all.js";
+        document.body.appendChild(element);
+        //-css
+        var e2      = document.createElement("link");
+        e2.setAttribute("rel","stylesheet");
+        e2.setAttribute("href","css/main.css");
+        document.head.appendChild(e2);
+        //-livereload
+        if (location.host == "cs313.dev" || location.host == "localhost") {
+          var lr      = document.createElement("script");
+          lr.src      = 'http://' +(location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1';
+          document.body.appendChild(lr);
+        }
+      }
+      if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+      else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+      else window.onload = downloadJSAtOnload;
+    </script>
+  <style type="text/css"></style><link rel="stylesheet" href="./Jolley's Site_files/main.css"><link rel="stylesheet" href="./Jolley's Site_files/main.css" type="text/css" media="screen"></head>
+  <body><div class="lightbox"></div>
+  <header class="mainHeader">
+    <div class="topbar">
+      <section id="wrapper"></section>
+      <div class="smiley floatleft">
+        <div class="left-eye"></div>
+        <div class="right-eye"></div>
+        <div class="smile"></div>
+      </div><a href="./Jolley's Site_files/Jolley's Site.html" class="title">
+        <h1>Jolley's Site</h1></a>
+    </div>
+    <nav class="menu"><a href="http://cs313.dev/arctic.html" class="menuItem snow"> Artic Wintered</a><a href="http://cs313.dev/aboutMe.html" class="menuItem snow"> About Me</a><a href="http://cs313.dev/assign.html" class="menuItem snow"> Assignments</a></nav>
+  </header>
+  <h2>Laugh a little!</h2>
+  <div id="f1" class="funny" style="display: block;"> <a href="http://cs313.dev/#img1"><img src="./Jolley's Site_files/fox.jpg"></a><a id="img1" href="http://cs313.dev/#_" class="lightbox"><img src="./Jolley's Site_files/fox.jpg"></a>
+    <div>src:<a href="http://www.jeffpalm.com/fox/fox.jpg">http://www.jeffpalm.com/fox/fox.jpg</a></div>
+  </div>
+  <div id="f2" class="funny"><a href="http://cs313.dev/#img2"><img src="./Jolley's Site_files/swing.gif"></a><a id="img2" href="http://cs313.dev/#_" class="lightbox"><img src="./Jolley's Site_files/swing.gif"></a>
+    <div>src:<a href="http://geekfun.pl/pm_build_swing.gif">http://geekfun.pl/pm_build_swing.gif</a></div>
+  </div>
+  <div id="f3" class="funny"><a href="http://cs313.dev/#img3"><img src="./Jolley's Site_files/sudo.png" title="Proper Use Policy apparently means Simons Says."></a><a id="img3" href="http://cs313.dev/#_" class="lightbox"><img src="./Jolley's Site_files/sudo.png" title="Proper Use Policy apparently means Simons Says."></a>
+    <div>src:<a href="http://imgs.xkcd.com/comics/sandwich.png">http://imgs.xkcd.com/comics/sandwich.png</a></div>
+  </div>
+  <div id="f4" class="funny"><a href="http://cs313.dev/#img4"><img src="./Jolley's Site_files/pointers.png" title="Every computer, at the unreachable memory address 0x-1, stores a secret.  I found it, and it is that all humans ar-- SEGMENTATION FAULT."></a><a id="img4" href="http://cs313.dev/#_" class="lightbox"><img src="./Jolley's Site_files/pointers.png" title="Every computer, at the unreachable memory address 0x-1, stores a secret.  I found it, and it is that all humans ar-- SEGMENTATION FAULT."></a>
+    <div>src:<a href="http://imgs.xkcd.com/comics/pointers.png">http://imgs.xkcd.com/comics/pointers.png</a></div>
+  </div>
+<script src="./Jolley's Site_files/all.js"></script><script src="./Jolley's Site_files/livereload.js"></script></body></html>
