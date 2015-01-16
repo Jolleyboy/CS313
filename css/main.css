@@ -101,7 +101,24 @@ body h4 {
   border-radius: 10px;
   padding: 5px;
   background: rgba(255,255,255,0.9);
-  width: 40%;
+  *zoom: 1;
+  width: auto;
+  max-width: 1440px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  width: 50%;
+}
+.funny div:before,
+.funny div:after {
+  content: '';
+  display: table;
+}
+.funny div:after {
+  clear: both;
 }
 .lightbox {
   position: fixed;
