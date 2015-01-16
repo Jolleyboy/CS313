@@ -156,7 +156,8 @@ body h4 {
   border-bottom: 2px solid #000;
 }
 .mainHeader .topbar h1 {
-  color: #333;
+  color: #444;
+  text-shadow: 1px 1px 0 rgba(140,140,140,0.6), -1px -1px 1px rgba(0,0,0,0.67);
   margin: 0 0;
   position: relative;
   top: -4px;
