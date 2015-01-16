@@ -183,7 +183,24 @@ button:active {
   background-color: #0068c3;
 }
 .funny {
+  *zoom: 1;
+  width: auto;
+  max-width: 1440px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
   width: 500px;
+}
+.funny:before,
+.funny:after {
+  content: '';
+  display: table;
+}
+.funny:after {
+  clear: both;
 }
 .funny img {
   width: 500px;
