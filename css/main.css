@@ -38,6 +38,7 @@ html {
   font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 }
 body {
+  height: 100%;
   margin: 0;
   background-image: url("../images/mountains.jpg"), url("../images/bgsnow.jpg");
   background-repeat: no-repeat, repeat;
