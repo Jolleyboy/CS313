@@ -206,7 +206,7 @@ body h4 {
   text-align: center;
   border-right: 5px solid #222;
   background: #0074d9;
-  background-image: url("http://www.wearewebstars.dk/codepen/img/s1.png"), url("http://www.wearewebstars.dk/codepen/img//s2.png"), url("http://www.wearewebstars.dk/codepen/img//s3.png");
+  background-image: url("../images/s1.png"), url("../images/s2.png"), url("../images/s3.png");
   font-weight: bold;
 }
 .mainHeader .menu .menuItem:hover {
