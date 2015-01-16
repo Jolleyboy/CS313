@@ -261,14 +261,14 @@ button:active {
   height: 70px;
   border-radius: 50%;
   margin-right: 20px;
-  background: #808080;
-  border: 5px solid #737373;
+  background: #ffc0cb;
+  border: 5px solid #ff93a6;
   position: relative;
 }
 .smiley .left-eye {
   width: 18%;
   height: 18%;
-  background: #666;
+  background: #ff6781;
   position: relative;
   top: 29%;
   left: 22%;
@@ -280,7 +280,7 @@ button:active {
   height: 18%;
   border-radius: 50%;
   position: relative;
-  background: #666;
+  background: #ff6781;
   top: 29%;
   right: 22%;
   float: right;
@@ -300,12 +300,12 @@ button:active {
   top: -50%;
   left: 0%;
   border-radius: 50%;
-  background: #666;
+  background: #ff6781;
   height: 100%;
   width: 97%;
 }
 .smiley .smile:after {
-  background: #666;
+  background: #ff6781;
   height: 80%;
   top: -40%;
   left: 0%;
