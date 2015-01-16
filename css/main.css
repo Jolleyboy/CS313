@@ -159,6 +159,7 @@ body h1 {
   border-bottom-right-radius: 20px;
 }
 h2 {
+  width: 200px;
   margin: auto auto;
 }
 button {
