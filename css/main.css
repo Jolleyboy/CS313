@@ -39,7 +39,7 @@ html {
 }
 body {
   margin: 0;
-  background-image: url("../images/mountains.jpg"), url("bgsnow.jpg");
+  background-image: url("../images/mountains.jpg"), url("../images/bgsnow.jpg");
   background-repeat: no-repeat, repeat;
   background-size: 100%;
   color: #3a3a3a;
