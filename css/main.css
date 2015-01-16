@@ -260,6 +260,7 @@ body h4 {
 h2 {
   width: 160px;
   margin: 20px auto;
+  border-radius: 10px;
   background: rgba(200,200,200,0.9);
 }
 button {
