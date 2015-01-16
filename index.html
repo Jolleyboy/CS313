@@ -15,8 +15,18 @@
       else if (window.attachEvent)
         window.attachEvent("onload", downloadJSAtOnload);
       else window.onload = downloadJSAtOnload;
-      window.onload = $("head").append($("<link rel='stylesheet' href='css/main.css' type='text/css' media='screen' />"))
       
+      function loadStyleSheet(src){
+            if (document.createStyleSheet) document.createStyleSheet(src);
+            else {
+                var stylesheet = document.createElement('link');
+                stylesheet.href = src;
+                stylesheet.rel = 'stylesheet';
+                stylesheet.type = 'text/css';
+                document.getElementsByTagName('head')[0].appendChild(stylesheet);
+            }
+        }
+      window.onload = loadStyleSheet('css/main.css');
     </script>
     <!--The script below is used for live reloading pages.-->
     <!--Take it out for prodiction -->
