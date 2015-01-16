@@ -4,20 +4,27 @@
     <title>Jolley's Site</title>
     <link rel="stylesheet" href="css/main.css">
     <script>
-      //load javascript later
+      //-defer javascript/css loading
       function downloadJSAtOnload() {
+        //-javascript
         var element = document.createElement("script");
         element.src = "js/all.js";
+        //-livereload
+        var e2      = document.createElement("script");
+        e2.src      = 'http://' +(location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1';
+        //-css
+        var e3      = document.createElement("link");
+        e3.setAttribute("rel","stylesheet");
+        e3.setAttribute("href","css/main.css");
         document.body.appendChild(element);
+        document.body.appendChild(e2);
+        document.head.appendChild(e3);
       }
       if (window.addEventListener)
         window.addEventListener("load", downloadJSAtOnload, false);
       else if (window.attachEvent)
         window.attachEvent("onload", downloadJSAtOnload);
       else window.onload = downloadJSAtOnload;
-      //The script below is used for live reloading pages.
-      //Take it out for prodiction
-      window.onload += document.write('<script src="http://' +(location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1"></' + 'script>'); 
     </script>
   </head>
   <div class="lightbox"></div>
