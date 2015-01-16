@@ -155,6 +155,22 @@ body h4 {
   background: #222;
   border-bottom: 2px solid #000;
 }
+.mainHeader .topbar .title {
+  border: none;
+  text-decoration: none;
+  color: initial;
+}
+.mainHeader .topbar .title:hover {
+  border: none;
+  text-decoration: none;
+  color: initial;
+}
+.mainHeader .topbar .title:visited {
+  opacity: 1;
+}
+.mainHeader .topbar .title h1:hover {
+  color: #808080;
+}
 .mainHeader .topbar h1 {
   font-style: italic;
   color: #535353;
@@ -232,13 +248,13 @@ body h4 {
   border-right: 5px solid #222;
 }
 .mainHeader .menu .menuItem:first-child {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 .mainHeader .menu .menuItem:last-child {
   border-right: none;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 h2 {
   width: 200px;
@@ -305,7 +321,7 @@ button:active {
   top: 67%;
   left: 16.5%;
   width: 70%;
-  height: 20%;
+  height: 50%;
   overflow: hidden;
 }
 .smiley .smile:after,
