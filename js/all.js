@@ -9206,6 +9206,6 @@ return jQuery;
 
 $(function() {
   var num;
-  num = Math.floor(Math.randon() * $('.funny').length);
+  num = Math.floor(Math.random() * $('.funny').length);
   return $('.funny:eq(' + num + ')').show();
 });
