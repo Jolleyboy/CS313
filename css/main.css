@@ -55,6 +55,7 @@ body h4 {
   color: #333;
 }
 .funny {
+  background: rgba(200,200,200,0.8);
   font-size: 80%;
   *zoom: 1;
   width: auto;
