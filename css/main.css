@@ -59,6 +59,7 @@ body h1 {
   padding-right: 0;
   display: none;
   max-width: 80%;
+  text-align: center;
 }
 .funny:before,
 .funny:after {
