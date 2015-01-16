@@ -63,7 +63,7 @@ body h1 {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  max-width: 90%;
+  max-width: 95%;
   max-height: 80%;
   margin-top: 2%;
 }
