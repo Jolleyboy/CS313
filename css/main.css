@@ -59,6 +59,10 @@ body h1 {
   background: rgba(0,0,0,0.8);
 }
 .lightbox img {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   max-width: 90%;
   max-height: 80%;
   margin-top: 2%;
