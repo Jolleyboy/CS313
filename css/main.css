@@ -182,4 +182,7 @@ button:focus {
 button:active {
   background-color: #0068c3;
 }
+.funny {
+  width: 500px;
+}
 
