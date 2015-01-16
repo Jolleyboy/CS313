@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jolley's Site</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+      //-defer javascript/css loading
+      function downloadJSAtOnload() {
+        //-javascript
+        var element = document.createElement("script");
+        element.src = "js/all.js";
+        document.body.appendChild(element);
+        //-css
+        var e2      = document.createElement("link");
+        e2.setAttribute("rel","stylesheet");
+        e2.setAttribute("href","css/main.css");
+        document.head.appendChild(e2);
+        //-livereload
+        if (location.host == "cs313.dev" || location.host == "localhost") {
+          var lr      = document.createElement("script");
+          lr.src      = 'http://' +(location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1';
+          document.body.appendChild(lr);
+        }
+      }
+      if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+      else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+      else window.onload = downloadJSAtOnload;
+    </script>
+  </head>
+</html>
