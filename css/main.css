@@ -68,6 +68,8 @@ body h4 {
   display: none;
   max-width: 80%;
   text-align: center;
+  padding: 10px;
+  background: rgba(255,255,255,0.9);
 }
 .funny:before,
 .funny:after {
@@ -96,6 +98,9 @@ body h4 {
 }
 .funny img:after {
   clear: both;
+}
+.funny div {
+  border-radius: 10px;
 }
 .lightbox {
   position: fixed;
