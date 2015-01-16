@@ -159,8 +159,6 @@ body h4 {
   color: #343434;
   text-shadow: 1px 1px 0 rgba(200,200,200,0.6), -1px -1px 1px rgba(0,0,0,0.67);
   margin: 0 0;
-  position: relative;
-  top: -4px;
 }
 .mainHeader .menu {
   margin-top: 20px;
