@@ -158,6 +158,25 @@ body h1 {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+h2 {
+  *zoom: 1;
+  width: auto;
+  max-width: 1440px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+h2:before,
+h2:after {
+  content: '';
+  display: table;
+}
+h2:after {
+  clear: both;
+}
 button {
   margin: 10px;
   font-size: 13px;
