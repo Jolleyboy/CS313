@@ -216,7 +216,7 @@ body h4 {
   padding: 26px;
   text-align: center;
   border-right: 5px solid #222;
-  background: #0074d9;
+  background: rgba(91,128,169,0.8);
   background-image: url("../images/s1.png"), url("../images/s2.png"), url("../images/s3.png");
   font-weight: bold;
 }
