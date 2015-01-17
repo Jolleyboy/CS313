@@ -263,7 +263,7 @@ button {
   font-size: 13px;
   padding: 10px 22px;
   border-radius: 3px;
-  background-color: #0074d9;
+  background-color: #2ecc40;
   color: #fff;
   cursor: pointer;
   font-weight: bold;
@@ -276,11 +276,11 @@ button {
 }
 button:hover,
 button:focus {
-  background-color: #006ece;
+  background-color: #2cc23d;
   color: #f7f7f7;
 }
 button:active {
-  background-color: #0068c3;
+  background-color: #29b83a;
 }
 
 .snow {
