@@ -282,6 +282,11 @@ button:focus {
 button:active {
   background-color: #0068c3;
 }
+.snow {
+  -webkit-animation: #fffafa 20s linear infinite;
+  -ms-animation: #fffafa 20s linear infinite;
+  animation: #fffafa 20s linear infinite;
+}
 
 .smiley {
   float: left;
