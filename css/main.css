@@ -2,6 +2,7 @@ html {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  background-image: url("../images/mountains.jpg"), url("../images/bgsnow.jpg");
   background-repeat: no-repeat, repeat;
   background-size: cover;
 }
