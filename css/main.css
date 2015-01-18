@@ -9,6 +9,7 @@
 .profileText {
   width: 500px;
   float: left;
+  margin-left: 20px;
   background: rgba(255,255,255,0.8);
   border-radius: 20px;
   padding: 20px;
