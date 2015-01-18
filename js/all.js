@@ -9212,6 +9212,5 @@ test = function() {
 $(function() {
   var num;
   num = Math.floor(Math.random() * $('.funny').length);
-  $('.funny:eq(' + num + ')').show();
-  return $("head").append($("<link rel='stylesheet' href='css/main.css' type='text/css' media='screen' />"));
+  return $('.funny:eq(' + num + ')').show();
 });
