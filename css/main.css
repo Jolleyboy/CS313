@@ -11,26 +11,7 @@
   background: rgba(255,255,255,0.8);
   border-radius: 20px;
   padding: 20px;
-}
-[class^='profile'] {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 31.3333333333333%;
-  margin-left: 0%;
-  margin-right: 3%;
-}
-[class^='profile']:before,
-[class^='profile']:after {
-  content: '';
-  display: table;
-}
-[class^='profile']:after {
-  clear: both;
-}
-[class^='profile']:last-child {
-  margin-right: 0%;
+  width: 200px;
 }
 
 html {
