@@ -17,7 +17,7 @@
 .bubbleSelector {
   position: relative;
   top: 160px;
-  width: 100%;
+  width: 800px;
   list-style-type: none;
 }
 .bubbleSelector li {
