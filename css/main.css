@@ -8,26 +8,10 @@
   float: left;
 }
 .profileText {
-  *zoom: 1;
-  width: auto;
-  max-width: 800px;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0;
-  padding-right: 0;
+  width: 100px;
   background: rgba(255,255,255,0.8);
   border-radius: 20px;
   padding: 20px;
-}
-.profileText:before,
-.profileText:after {
-  content: '';
-  display: table;
-}
-.profileText:after {
-  clear: both;
 }
 
 html {
