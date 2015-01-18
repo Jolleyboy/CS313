@@ -14,6 +14,27 @@
   border-radius: 20px;
   padding: 20px;
 }
+.bubbleSelector {
+  list-style-type: none;
+  display: inline;
+}
+.bubbleSelector li {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 20%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.bubbleSelector li:before,
+.bubbleSelector li:after {
+  content: '';
+  display: table;
+}
+.bubbleSelector li:after {
+  clear: both;
+}
 
 html {
   margin: 0px;
