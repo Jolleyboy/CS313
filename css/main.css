@@ -295,13 +295,6 @@ button:focus {
 button:active {
   background-color: #29b83a;
 }
-.profilePic {
-  width: 300px;
-  height: 300px;
-  border-radius: 150px;
-  background: url("../images/profile.png");
-  box-shadow: 6px 6px 6px #222;
-}
 
 .snow {
   -webkit-animation: snow 20s linear infinite;
