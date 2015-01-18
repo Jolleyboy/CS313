@@ -24,6 +24,7 @@
   list-style-type: none;
 }
 .bubbleSelector li {
+  padding: 0;
   *zoom: 1;
   float: left;
   clear: none;
