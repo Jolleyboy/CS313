@@ -24,9 +24,9 @@
   float: left;
   clear: none;
   text-align: inherit;
-  width: 17.6%;
+  width: 20%;
   margin-left: 0%;
-  margin-right: 3%;
+  margin-right: 0%;
 }
 .bubbleSelector li:before,
 .bubbleSelector li:after {
@@ -35,9 +35,6 @@
 }
 .bubbleSelector li:after {
   clear: both;
-}
-.bubbleSelector li:last-child {
-  margin-right: 0%;
 }
 
 html {
