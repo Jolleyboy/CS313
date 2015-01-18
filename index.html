@@ -14,12 +14,6 @@
         e2.setAttribute("rel","stylesheet");
         e2.setAttribute("href","css/main.css");
         document.head.appendChild(e2);
-        //-livereload
-        if (location.host == "cs313.dev" || location.host == "localhost") {
-          var lr      = document.createElement("script");
-          lr.src      = 'http://' +(location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1';
-          document.body.appendChild(lr);
-        }
       }
       if (window.addEventListener)
         window.addEventListener("load", downloadJSAtOnload, false);
