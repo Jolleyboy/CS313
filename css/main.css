@@ -292,7 +292,7 @@ button:active {
   height: 300px;
   border-radius: 150px;
   background: url("../images/profile.png");
-  box-shadow: 8px 8px 8px #222;
+  box-shadow: 6px 6px 6px #222;
 }
 
 .snow {
