@@ -16,7 +16,6 @@
 }
 .bubbleSelector {
   list-style-type: none;
-  display: inline;
 }
 .bubbleSelector li {
   *zoom: 1;
