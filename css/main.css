@@ -241,7 +241,7 @@ body h4 {
 }
 .mainHeader .menu .menuItem:hover {
   background: rgba(107,141,178,0.8);
-  background-image: inherit;
+  background-image: url("../images/s1.png"), url("../images/s2.png"), url("../images/s3.png");
   -webkit-animation: #fffafa 20s linear infinite;
   -ms-animation: #fffafa 20s linear infinite;
   animation: #fffafa 20s linear infinite;
