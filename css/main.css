@@ -188,7 +188,7 @@ body h4 {
   padding-right: 0;
   width: 600px;
   height: 80px;
-  border: 3px solid #222;
+  border: 4px solid #222;
 }
 .mainHeader .menu:before,
 .mainHeader .menu:after {
@@ -240,7 +240,7 @@ body h4 {
   clear: both;
 }
 .mainHeader .menu .menuItem:hover {
-  border-right: 5px solid #222;
+  border-right: 2px solid #222;
 }
 .mainHeader .menu .menuItem:first-child {
   border-top-left-radius: 13px;
