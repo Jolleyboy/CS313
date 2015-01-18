@@ -1,3 +1,11 @@
+.profilePic {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background: url("../images/profile.png");
+  box-shadow: 6px 6px 6px #222;
+}
+
 html {
   margin: 0px;
   padding: 0px;
