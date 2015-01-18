@@ -1,7 +1,7 @@
 .profilePic {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
   background: url("../images/profile.png");
   box-shadow: 6px 6px 6px #222;
 }
