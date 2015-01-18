@@ -4,7 +4,6 @@
   border-radius: 110px;
   background: url("../images/profile.png");
   box-shadow: 6px 6px 6px #222;
-  margin: 20px;
   float: left;
 }
 .profileText {
