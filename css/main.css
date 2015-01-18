@@ -242,6 +242,9 @@ body h4 {
 .mainHeader .menu .menuItem:hover {
   background: rgba(107,141,178,0.8);
   background-image: inherit;
+  -webkit-animation: #fffafa 20s linear infinite;
+  -ms-animation: #fffafa 20s linear infinite;
+  animation: #fffafa 20s linear infinite;
   border-right: 2px solid #222;
 }
 .mainHeader .menu .menuItem:first-child {
