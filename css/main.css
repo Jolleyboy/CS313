@@ -150,6 +150,14 @@ body h4 {
 .master:after {
   clear: both;
 }
+.master:before,
+.master:after {
+  content: "";
+  display: table;
+}
+.master:after {
+  clear: both;
+}
 .mainHeader {
   width: 100%;
   margin: 0;
