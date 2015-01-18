@@ -7,6 +7,9 @@
   margin: 20px;
   float: left;
 }
+.profileText {
+  background: rgba(255,255,255,0.8);
+}
 
 html {
   margin: 0px;
