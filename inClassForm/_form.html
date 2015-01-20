@@ -1,0 +1,43 @@
+
+<div class="master">
+  <div class="results"></div>
+</div>
+<div class="masterForm">
+  <h1>Tell us about yourself!</h1>
+  <form id="classForm" action="#">
+    <div class="textInput">
+      <h3>Personal Info</h3>
+      <label>Name:</label>
+      <input type="text" name="name"/>
+      <label>Email:</label>
+      <input type="text" name="email"/><br/>
+    </div>
+    <div class="majorInput">
+      <h3>Major</h3>
+      <label>CS</label>
+      <input type="radio" name="major" value="cs"/>
+      <label>CIT</label>
+      <input type="radio" name="major" value="cit"/>
+      <label>Web Dev</label>
+      <input type="radio" name="major" value="wdd"/>
+      <label>CE</label>
+      <input type="radio" name="major" value="ce"/><br/>
+    </div>
+    <div class="placesInput">
+      <h3>Places You've Been</h3>
+      <label>Disney Land</label>
+      <input type="checkbox" name="places[]" value="disney"/>
+      <label>Rome Temple</label>
+      <input type="checkbox" name="places[]" value="romeTemple"/>
+      <label>Olympia, WA</label>
+      <input type="checkbox" name="places[]" value="olympia"/>
+      <label>White House</label>
+      <input type="checkbox" name="places[]" value="whiteHouse"/><br/>
+    </div>
+    <div class="commentInput">
+      <h3>Anything you'd like to add?</h3>
+      <textarea name="comments" placeholder="Please add comments here"></textarea>
+      <input type="button" value="Submit" onclick="ajaxSubmit()"/>
+    </div>
+  </form>
+</div>
