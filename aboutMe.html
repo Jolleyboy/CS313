@@ -20,6 +20,8 @@
       else if (window.attachEvent)
         window.attachEvent("onload", downloadJSAtOnload);
       else window.onload = downloadJSAtOnload;
+      //- Set the base
+      document.write("<base href='http://" + document.location.host + "' />");
     </script>
   </head>
   <body>

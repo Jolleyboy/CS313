@@ -20,6 +20,8 @@
       else if (window.attachEvent)
         window.attachEvent("onload", downloadJSAtOnload);
       else window.onload = downloadJSAtOnload;
+      //- Set the base
+      document.write("<base href='http://" + document.location.host + "' />");
     </script>
   </head>
   <body>
@@ -35,6 +37,8 @@
       </div>
       <nav class="menu"><a href="arctic.html" class="menuItem snow"> Arctic Winter</a><a href="aboutMe.html" class="menuItem snow">About Me</a><a href="assign.html" class="menuItem snow"> Assignments</a></nav>
     </header>
-    <h1>Coming Soon (to a browser near you!)</h1>
+    <div class="master">
+      <h1 id="comingSoon">Coming Soon (to a browser near you!)</h1>
+    </div>
   </body>
 </html>
