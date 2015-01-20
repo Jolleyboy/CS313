@@ -44,15 +44,15 @@
     <div class="masterForm">
       <h1>Tell us about yourself!</h1>
       <form id="classForm" action="#">
-        <div class="textInput">
-          <h3>Personal Info</h3>
+        <div class="textInputClassForm">
+          <h3>Personal Info</h3><br>
           <label>Name:</label>
-          <input type="text" name="name">
+          <input type="text" name="name" title="Maybe you have a really long name... I don't judge.">
           <label>Email:</label>
           <input type="text" name="email"><br>
         </div>
-        <div class="majorInput">
-          <h3>Major</h3>
+        <div class="majorInputClassForm">
+          <h3>Major</h3><br>
           <label>CS</label>
           <input type="radio" name="major" value="cs">
           <label>CIT</label>
@@ -62,8 +62,8 @@
           <label>CE</label>
           <input type="radio" name="major" value="ce"><br>
         </div>
-        <div class="placesInput">
-          <h3>Places You've Been</h3>
+        <div class="placesInputClassForm">
+          <h3>Places You've Been</h3><br>
           <label>Disney Land</label>
           <input type="checkbox" name="places[]" value="disney">
           <label>Rome Temple</label>
@@ -73,8 +73,8 @@
           <label>White House</label>
           <input type="checkbox" name="places[]" value="whiteHouse"><br>
         </div>
-        <div class="commentInput">
-          <h3>Anything you'd like to add?</h3>
+        <div class="commentInputClassForm">
+          <h3>Anything you'd like to add?</h3><br>
           <textarea name="comments" placeholder="Please add comments here"></textarea>
           <input type="button" value="Submit" onclick="ajaxSubmit()">
         </div>
