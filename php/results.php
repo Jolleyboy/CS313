@@ -3,20 +3,8 @@
   $file = fopen('surveyData', 'r+');
   $content = fread($file,filesize('surveyData'));
   fclose($file);
-  
   $array = explode(" ", $content);
-  $array[0] += $_POST['q1'];
-  $array[1] += $_POST['q2'];
-  $array[2] += $_POST['q3'];
-  $array[3] += $_POST['q4'];
-  $array[4] += 1;
-  $newContent = implode(" ", $array);
   
-  $file = fopen('surveyData', 'w+');
-  fwrite($file, $newContent);
-  fclose($file);
-  $_SESSION['completedSurvey'] = true;
-
   print "<script>";
   print "   ";
   print "</script>";
