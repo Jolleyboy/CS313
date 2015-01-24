@@ -1,4 +1,6 @@
- <?php require $_SERVER['DOCUMENT_ROOT'] . '/php/cookies.php';?><!DOCTYPE html>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/php/session.php';?>
+<?php if( isset($_SESSION['completedSurvey'])) {header("location: results.html");} ?><!DOCTYPE html>
 <html>
   <head>
     <title>Jolley's Site</title>
@@ -37,21 +39,98 @@
           <h1>Jolley's Site</h1></a>
       </div>
       <nav class="menu"><a href="arctic.html" class="menuItem snow"> Arctic Winter</a><a href="aboutMe.html" class="menuItem snow">About Me</a><a href="assign.html" class="menuItem snow"> Assignments</a></nav>
-    </header>
+    </header><?php if( isset($_SESSION['completedSurvey'])) ?>
     <div class="master">
       <div class="surveyContent">
-        <h1>Please select the answer that best matches how you feel.</h1><span class="question">It would benefit my education to take a few minutes during class see my classmate's work on the projector.</span>
-        <label>Strongly Disagree</label>
-        <input type="radio" name="q1" value="stronglyDisagree">
-        <label>Somewhat Disagree</label>
-        <input type="radio" name="q1" value="somewhatDisagree">
-        <label>Neither Agree Nor Disagree</label>
-        <input type="radio" name="q1" value="neither">
-        <label>Somewhat Agree</label>
-        <input type="radio" name="q1" value="somewhatAgree">
-        <label>Strongly Agree</label>
-        <input type="radio" name="q1" value="stronlyAgree">
+        <h1>Please select the answer that best matches how you feel.</h1>
+        <div class="questions">
+          <div class="Filler">Questions</div>
+          <div class="question">I find the use of sass/less/stylus and other prepocessors useful.</div>
+          <div class="question">Seeing my class mates work during class is helpful.</div>
+          <div class="question">I want BYU-I to teach a class on mobile app development</div>
+          <div class="question">I miss Jolley's mustache.</div>
+        </div>
+        <div class="responses">
+          <div class="responseHeader">
+            <div class="responseTitle">Disagree</div>
+            <div class="responseTitle">Somewhat Disagree</div>
+            <div class="responseTitle">Neutral</div>
+            <div class="responseTitle">Somewhat Agree</div>
+            <div class="responseTitle">Agree</div>
+          </div>
+          <div class="q1">
+            <div class="response">
+              <input type="radio" name="q1" value="-2">
+            </div>
+            <div class="response">
+              <input type="radio" name="q1" value="-1">
+            </div>
+            <div class="response">
+              <input type="radio" name="q1" value="0">
+            </div>
+            <div class="response">
+              <input type="radio" name="q1" value="1">
+            </div>
+            <div class="response">
+              <input type="radio" name="q1" value="2">
+            </div>
+          </div>
+          <div class="q2"> 
+            <div class="response">
+              <input type="radio" name="q2" value="-2">
+            </div>
+            <div class="response">
+              <input type="radio" name="q2" value="-1">
+            </div>
+            <div class="response">
+              <input type="radio" name="q2" value="0">
+            </div>
+            <div class="response">
+              <input type="radio" name="q2" value="1">
+            </div>
+            <div class="response">
+              <input type="radio" name="q2" value="2">
+            </div>
+          </div>
+          <div class="q3">
+            <div class="response">
+              <input type="radio" name="q3" value="-2">
+            </div>
+            <div class="response">
+              <input type="radio" name="q3" value="-1">
+            </div>
+            <div class="response">
+              <input type="radio" name="q3" value="0">
+            </div>
+            <div class="response">
+              <input type="radio" name="q3" value="1">
+            </div>
+            <div class="response">
+              <input type="radio" name="q3" value="2">
+            </div>
+          </div>
+          <div class="q4"> 
+            <div class="response">
+              <input type="radio" name="q4" value="-2">
+            </div>
+            <div class="response">
+              <input type="radio" name="q4" value="-1">
+            </div>
+            <div class="response">
+              <input type="radio" name="q4" value="0">
+            </div>
+            <div class="response">
+              <input type="radio" name="q4" value="1">
+            </div>
+            <div class="response">
+              <input type="radio" name="q4" value="2">
+            </div>
+          </div>
+        </div>
+        <button onclick="ajaxSubmitSurvey()" class="surveyButton">Submit</button>
+        <button onclick="ajaxViewSurvey()" class="surveyButton">See results without voting</button>
       </div>
+      <div class="surveyResults"></div>
     </div>
   </body>
 </html>
