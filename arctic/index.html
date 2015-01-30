@@ -1,0 +1,62 @@
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/php/session.php';?><!DOCTYPE html>
+<html>
+  <head>
+    <title>Jolley's Site</title>
+    <script>
+      //-defer javascript/css loading
+      function downloadJSAtOnload() {
+        //-javascript
+        var element = document.createElement("script");
+        element.src = "js/all.js";
+        document.body.appendChild(element);
+        //-css
+        var e2      = document.createElement("link");
+        e2.setAttribute("rel","stylesheet");
+        e2.setAttribute("href","css/main.css");
+        document.head.appendChild(e2);
+      }
+      if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+      else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+      else window.onload = downloadJSAtOnload;
+      //- Set the base
+      document.write("<base href='http://" + document.location.host + "' />");
+    </script>
+  </head>
+  <body>
+    <div class="arcticMaster">
+      <div class="buttons-display">
+        <div class="buttons">
+          <button id="gatherBtn" onclick="gather()" title="-2 Food, -5 Water">Gather</button>
+          <progress id="gatherProgress" value="600" max="600"></progress>
+          <button id="lightFireBtn" onclick="lightFire()" title="-1 Tinder, -5 Sticks">Light Fire</button>
+          <progress id="lightFireProgress" value="600" max="600"></progress>
+        </div>
+        <div class="display">
+          <div class="food"></div>
+          <div class="sticks"></div>
+          <div class="seeds"></div>
+          <div class="leather"></div>
+          <div class="tinder"></div>
+          <div class="water"></div>
+        </div>
+      </div>
+      <div class="console"></div>
+      <div class="userBar">
+        <div class="warmth">
+          <label>Warmth: </label>
+          <progress id="warmthProgress" value="100" max="100"></progress>
+        </div>
+        <div class="hunger"> 
+          <label>Hunger:</label>
+          <progress id="hungerProgress" value="100" max="100"></progress>
+        </div>
+        <div class="hp"> 
+          <label>HP:</label>
+          <progress id="hpProgress" value="100" max="100"></progress>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
