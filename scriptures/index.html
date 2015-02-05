@@ -27,6 +27,7 @@
     </script>
   </head>
   <body>
+    <div class="lightbox"></div>
     <header class="mainHeader">
       <div class="topbar">
         <section id="wrapper"></section>
@@ -39,13 +40,10 @@
       </div>
       <nav class="menu"><a href="arctic/" class="menuItem snow"> Arctic Winter</a><a href="aboutMe.html" class="menuItem snow">About Me</a><a href="assign.html" class="menuItem snow"> Assignments</a></nav>
     </header>
-    <div class="master"></div>
-    <div class="assignments">
-      <h1>Assignments for the semester</h1>
-      <div class="assign1"><a href="survey/">Survey Assignment</a></div>
-      <div class="assign2"><a href="arctic/">PHP Project: Artic Winter</a></div>
-      <div class="assign3"><a href="inClassForm/">Form Group Assignment (In-Class)</a></div>
-      <div class="assign4"><a href="scriptures/">Scripture Group Assignemnt (In-Class)</a></div>
+    <div class="master">
+      <input id="scriptureSearch" type="text" name="search" onkeypress="scriptureAjax();">
+      <button onclick="scriptureAjax()" class="searchLabel">Search</button>
+      <div class="scriptures">Search for what you want.  Results will appear as you search.</div>
     </div>
   </body>
 </html>
