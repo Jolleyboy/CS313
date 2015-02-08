@@ -1,3 +1,3 @@
 # Jolley's Site
 
-Artic Wintered is starting to shape up!
+My game, Artic Winter, is starting to shape up! See if you can beat my high score.
