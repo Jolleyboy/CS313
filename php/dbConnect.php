@@ -1,5 +1,7 @@
 <?php
- function loadDatabase() { 
+  require_once $_SERVER['DOCUMENT_ROOT'] . '/php/session.php';
+   
+  function loadDatabase() { 
   $hostName = $_SERVER['SERVER_ADDR'];
   $dbName = 'arctic';
   $userName = 'jolley';

@@ -1,4 +1,4 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/php/session.php';?><!DOCTYPE html>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/php/loginValid.php';?><!DOCTYPE html>
 <html>
   <head>
     <title>Jolley's Site</title>
@@ -7,7 +7,19 @@
     <script src="js/all.js"></script>
   </head>
   <body ng-app="arctic">
-    <div ng-controller="displayFood" class="arcticMaster">
+    <header class="mainHeader">
+      <div class="topbar">
+        <section id="wrapper"></section>
+        <div class="smiley floatleft">
+          <div class="left-eye"></div>
+          <div class="right-eye"></div>
+          <div class="smile"></div>
+        </div>
+        <button id="displayPlayersBtn" onclick="displayPlayersAjax();">Display Players From Database</button><a href="/" class="title">
+          <h3><?php echo $_SESSION['name']?>, alone in the Arctic Winter</h3></a>
+      </div>
+    </header>
+    <div ng-controller="displayFood" class="arcticMaster snow5">
       <div class="buttons-display">
         <div class="buttons">
           <button id="gatherBtn" ng-click="gather(); canGather=false;" title="-2 Food, -5 Water" ng-disabled="!canGather">Gather</button>
@@ -33,11 +45,11 @@
       <div class="userBar">
         <div class="warmth">
           <label>Warmth: </label>
-          <progress value="{{warmth}}" max="100" class="warmthProgress"></progress>
+          <progress value="{{warmth}}" max="{{maxWamrth}}" class="warmthProgress"></progress>
         </div>
         <div class="hunger"> 
           <label>Hunger:</label>
-          <progress value="{{hunger}}" max="100" class="hungerProgress"></progress>
+          <progress value="{{hunger}}" max="{{maxHunger}}" class="hungerProgress"></progress>
         </div>
         <div class="hp"> 
           <label>HP:</label>

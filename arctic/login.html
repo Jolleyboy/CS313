@@ -1,22 +1,50 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/php/session.php';?><!DOCTYPE html>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/php/session.php';?><!DOCTYPE html>
 <html>
   <head>
     <title>Jolley's Site</title>
-    <script>document.write("<base href='http://" + document.location.host + "' />");</script>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/all.js"></script>
+    <script>
+      //-defer javascript/css loading
+      function downloadJSAtOnload() {
+        //-javascript
+        var element = document.createElement("script");
+        element.src = "js/all.js";
+        document.body.appendChild(element);
+        //-css
+        var e2      = document.createElement("link");
+        e2.setAttribute("rel","stylesheet");
+        e2.setAttribute("href","css/main.css");
+        document.head.appendChild(e2);
+      }
+      if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+      else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+      else window.onload = downloadJSAtOnload;
+      //- Set the base
+      document.write("<base href='http://" + document.location.host + "' />");
+    </script>
   </head>
   <body>
-    <div class="master">
+    <div class="loginMaster">
       <div class="loginDiv">
         <h1>Login</h1><br>
-        <label>Username:</label>
+        <label>Account Name:</label>
         <input type="text" name="username">
         <label>Password:</label>
-        <input type="password" name="password">
-        <button onclick="loginAjax();">Login </button>
+        <input type="password" name="password" onchange="loginAjax();"><br><br><br><br>
+        <button id="loginBtn" onclick="loginAjax();">Login </button>
       </div>
-      <div class="results"></div>
+      <div class="registerDiv">
+        <h1>New Account</h1><br>
+        <label>Account Name:</label>
+        <input type="text" name="username" placeholder="Account Name">
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Password">
+        <label>Player Name:</label>
+        <input type="text" name="playername" placeholder="Player Name"><br><br><br><br><br>
+        <button id="registerBtn" onclick="registerAjax();">Register</button>
+      </div>
+      <div class="loginResults"></div>
     </div>
   </body>
 </html>

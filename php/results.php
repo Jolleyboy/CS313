@@ -1,5 +1,6 @@
 <?php 
-  session_start();
+  require_once $_SERVER['DOCUMENT_ROOT'] . '/php/session.php';
+   
   $file = fopen('surveyData', 'r+');
   $content = fread($file,filesize('surveyData'));
   fclose($file);
