@@ -1,0 +1,22 @@
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/php/session.php';?><!DOCTYPE html>
+<html>
+  <head>
+    <title>Jolley's Site</title>
+    <script>document.write("<base href='http://" + document.location.host + "' />");</script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/all.js"></script>
+  </head>
+  <body>
+    <div class="master">
+      <div class="loginDiv">
+        <h1>Login</h1><br>
+        <label>Username:</label>
+        <input type="text" name="username">
+        <label>Password:</label>
+        <input type="password" name="password">
+        <button onclick="loginAjax();">Login </button>
+      </div>
+      <div class="results"></div>
+    </div>
+  </body>
+</html>
