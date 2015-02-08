@@ -2,34 +2,16 @@
 <html>
   <head>
     <title>Jolley's Site</title>
-    <script>
-      //-defer javascript/css loading
-      function downloadJSAtOnload() {
-        //-javascript
-        var element = document.createElement("script");
-        element.src = "js/all.js";
-        document.body.appendChild(element);
-        //-css
-        var e2      = document.createElement("link");
-        e2.setAttribute("rel","stylesheet");
-        e2.setAttribute("href","css/main.css");
-        document.head.appendChild(e2);
-      }
-      if (window.addEventListener)
-        window.addEventListener("load", downloadJSAtOnload, false);
-      else if (window.attachEvent)
-        window.attachEvent("onload", downloadJSAtOnload);
-      else window.onload = downloadJSAtOnload;
-      //- Set the base
-      document.write("<base href='http://" + document.location.host + "' />");
-    </script>
+    <script>document.write("<base href='http://" + document.location.host + "' />");</script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/all.js"></script>
   </head>
-  <body>
-    <div class="arcticMaster">
+  <body ng-app="arctic">
+    <div ng-controller="displayFood" class="arcticMaster">
       <div class="buttons-display">
         <div class="buttons">
-          <button id="gatherBtn" onclick="gather()" title="-2 Food, -5 Water">Gather</button>
-          <progress id="gatherProgress" value="600" max="600"></progress>
+          <button id="gatherBtn" ng-click="gather(); canGather=false;" title="-2 Food, -5 Water" ng-disabled="!canGather">Gather</button>
+          <progress id="gatherProgress" value="{{gatherProgress}}" max="600"></progress>
           <button id="lightFireBtn" onclick="lightFire()" title="-1 Tinder, -5 Sticks">Light Fire  </button><br>
           <button id="huntBtn" onclick="hunt()" class="hidden"></button>
           <progress id="huntProgress" class="hidden"></progress>
@@ -39,27 +21,27 @@
           <progress id="plantProgress" class="hidden"></progress>
         </div>
         <div class="display">
-          <div class="food"></div>
-          <div class="sticks"></div>
-          <div class="seeds"></div>
-          <div class="leather"></div>
-          <div class="tinder"></div>
-          <div class="water"></div>
+          <div class="food">Food: {{food}}</div>
+          <div class="sticks">Sticks: {{sticks}}</div>
+          <div class="seeds">Seeds: {{seeds}}</div>
+          <div class="leather">Leather: {{leather}}</div>
+          <div class="tinder">Tinder: {{tinder}}</div>
+          <div class="water">Water: {{water}}</div>
         </div>
       </div>
       <div class="console"></div>
       <div class="userBar">
         <div class="warmth">
           <label>Warmth: </label>
-          <progress value="100" max="100" class="warmthProgress"></progress>
+          <progress value="{{warmth}}" max="100" class="warmthProgress"></progress>
         </div>
         <div class="hunger"> 
           <label>Hunger:</label>
-          <progress value="100" max="100" class="hungerProgress"></progress>
+          <progress value="{{hunger}}" max="100" class="hungerProgress"></progress>
         </div>
         <div class="hp"> 
           <label>HP:</label>
-          <progress value="100" max="100" class="hpProgress"></progress>
+          <progress value="{{hp}}" max="{{maxHp}}" class="hpProgress"></progress>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@
   foreach ($results as $row)
   {
     //Find everything that matches the query
-    $pattern = '/' . $_POST['search'] . '/';
+    $pattern = '/' . $_POST['search'] . '/i';
     $subject = implode(" ", $row);
     
     if (preg_match($pattern, $subject, $matches))

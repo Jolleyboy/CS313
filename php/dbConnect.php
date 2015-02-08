@@ -1,6 +1,6 @@
 <?php
  function loadDatabase() { 
-  $hostName = 'localhost';
+  $hostName = $_SERVER['SERVER_ADDR'];
   $dbName = 'arctic';
   $userName = 'jolley';
   $password = 'just4u';
