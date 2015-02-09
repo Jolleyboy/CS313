@@ -24,7 +24,7 @@
         <div class="buttons">
           <button id="gatherBtn" ng-click="gather(); canGather=false;" title="-2 Food, -5 Water" ng-disabled="!canGather">Gather</button>
           <progress id="gatherProgress" value="{{gatherProgress}}" max="600"></progress>
-          <button id="lightFireBtn" onclick="lightFire()" title="-1 Tinder, -5 Sticks">Light Fire  </button><br>
+          <button id="lightFireBtn" ng-click="lightFire()" title="-1 Tinder, -5 Sticks">Light Fire  </button><br>
           <button id="huntBtn" onclick="hunt()" class="hidden"></button>
           <progress id="huntProgress" class="hidden"></progress>
           <button id="warmUpBtn" onclick="warmUp()" class="hidden"></button>
