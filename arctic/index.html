@@ -9,14 +9,15 @@
   <body ng-app="arctic">
     <header class="mainHeader">
       <div class="topbar">
-        <section id="wrapper"></section>
-        <div class="smiley floatleft">
-          <div class="left-eye"></div>
-          <div class="right-eye"></div>
-          <div class="smile"></div>
-        </div>
         <button id="displayPlayersBtn" onclick="displayPlayersAjax();">Display Players From Database</button><a href="/" class="title">
-          <h3><?php echo $_SESSION['name']?>, alone in the Arctic Winter</h3></a>
+          <section id="wrapper">
+            <div class="smiley floatleft">
+              <div class="left-eye"></div>
+              <div class="right-eye"></div>
+              <div class="smile"></div>
+            </div>
+          </section>
+          <h4><?php echo $_SESSION['name']?>, alone in the Arctic Winter</h4></a>
       </div>
     </header>
     <div ng-controller="displayFood" class="arcticMaster snow5">
