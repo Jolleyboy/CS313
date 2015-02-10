@@ -22,38 +22,42 @@
     <div ng-controller="displayFood" class="arcticMaster snow5">
       <div class="buttons-display">
         <div class="buttons">
-          <button id="gatherBtn" ng-click="gather(); canGather=false;" title="-2 Food, -5 Water" ng-disabled="!canGather">Gather</button>
-          <progress id="gatherProgress" value="{{gatherProgress}}" max="600"></progress>
-          <button id="lightFireBtn" ng-click="lightFire()" title="-1 Tinder, -5 Sticks">Light Fire  </button><br>
-          <button id="huntBtn" onclick="hunt()" class="hidden"></button>
-          <progress id="huntProgress" class="hidden"></progress>
-          <button id="warmUpBtn" onclick="warmUp()" class="hidden"></button>
-          <progress id="warmUpProgress" class="hidden"></progress>
-          <button id="plantBtn" onclick="plant()" class="hidden"></button>
-          <progress id="plantProgress" class="hidden"></progress>
+          <button id="gatherBtn" ng-click="gather(); canGather=false;" title="-2 Food, -2 Water" ng-disabled="!canGather">Gather</button>
+          <progress id="gatherProgress" value="{{gatherProgress}}" max="600"></progress><br>
+          <div class="buttons2">
+            <button id="lightFireBtn" ng-click="lightFire()" title="-1 Tinder, -5 Sticks" ng-class="{'hidden': sticks &lt; 5 || tinder &lt; 1 || fire}">Light Fire  </button>
+            <button id="huntBtn" onclick="hunt()" class="hidden"></button>
+            <progress id="huntProgress" class="hidden"></progress>
+            <button id="warmUpBtn" onclick="warmUp()" class="hidden"></button>
+            <progress id="warmUpProgress" class="hidden"></progress>
+            <button id="plantBtn" onclick="plant()" class="hidden"></button>
+            <progress id="plantProgress" class="hidden"></progress>
+            <button id="campBtn" ng-click="camp(); canGather=false;" title="-2 Food, -1 Water" ng-disabled="!canGather" ng-class="{'hidden': !fire}">Camp</button>
+          </div>
         </div>
         <div class="display">
-          <div class="food">Food: {{food}}</div>
-          <div class="sticks">Sticks: {{sticks}}</div>
-          <div class="seeds">Seeds: {{seeds}}</div>
-          <div class="leather">Leather: {{leather}}</div>
-          <div class="tinder">Tinder: {{tinder}}</div>
-          <div class="water">Water: {{water}}</div>
+          <div ng-class="{'hidden': food &lt;= 0}" class="food">Food: {{food}}</div>
+          <div ng-class="{'hidden': sticks &lt;= 0}" class="sticks">Sticks: {{sticks}}</div>
+          <div ng-class="{'hidden': seeds &lt;= 0}" class="seeds">Seeds: {{seeds}}</div>
+          <div ng-class="{'hidden': leather &lt;= 0}" class="leather">Leather: {{leather}}</div>
+          <div ng-class="{'hidden': tinder &lt;= 0}" class="tinder">Tinder: {{tinder}}</div>
+          <div ng-class="{'hidden': water &lt;= 0}" class="water">Water: {{water}}</div>
+          <div ng-class="{'hidden': !fire}" class="fire">Your campfire is burning.</div>
         </div>
       </div>
       <div class="console"></div>
       <div class="userBar">
         <div class="warmth">
           <label>Warmth: </label>
-          <progress value="{{warmth}}" max="{{maxWarmth}}" class="warmthProgress"></progress><span>{{warmth}} / {{maxWarmth}}</span>
+          <progress value="{{warmth}}" max="{{maxWarmth}}" ng-class="{'warmthWarning': (warmth/maxWarmth) &lt; .66 &amp;&amp; (warmth/maxWarmth) &gt; .33, 'warmthAlert'  : (warmth/maxWarmth) &lt;= .33}" class="warmthProgress"></progress><span>{{warmth}} / {{maxWarmth}}</span>
         </div>
         <div class="hunger"> 
           <label>Hunger:</label>
-          <progress value="{{hunger}}" max="{{maxHunger}}" class="hungerProgress"></progress><span>{{hunger}} / {{maxHunger}}</span>
+          <progress value="{{hunger}}" max="{{maxHunger}}" ng-class="{'hungerWarning': (hunger/maxHunger) &lt; .66 &amp;&amp; (hunger/maxHunger) &gt; .33, 'hungerAlert'  : (hunger/maxHunger) &lt;= .33}" class="hungerProgress"></progress><span>{{hunger}} / {{maxHunger}}</span>
         </div>
         <div class="hp"> 
           <label>HP:</label>
-          <progress value="{{hp}}" max="{{maxHp}}" class="hpProgress"></progress><span>{{hp}} / {{maxHp}}</span>
+          <progress value="{{hp}}" max="{{maxHp}}" ng-class="{'hpWarning': (hp/maxHp) &lt; .66 &amp;&amp; (hp/maxHp) &gt; .33, 'hpAlert'  : (hp/maxHp) &lt;= .33}" class="hpProgress"></progress><span>{{hp}} / {{maxHp}}</span>
         </div>
       </div>
     </div>
