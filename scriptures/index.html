@@ -1,6 +1,4 @@
-
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/php/session.php';?>
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/php/dbConnect.php';?><!DOCTYPE html>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/php/session.php';?><!DOCTYPE html>
 <html>
   <head>
     <title>Jolley's Site</title>
@@ -44,6 +42,30 @@
       <input id="scriptureSearch" type="text" name="search" onkeypress="scriptureAjax();">
       <button onclick="scriptureAjax()" class="searchLabel">Search</button>
       <div class="scriptures">Search for what you want.  Results will appear as you search.</div>
+      <div class="insertScriptures">
+        <div class="inputBook">
+          <label>Book</label>
+          <input type="text" name="book">
+        </div>
+        <div class="inputChapter">
+          <label>Chapter</label>
+          <input type="text" name="chapter">
+        </div>
+        <div class="inputVerse">
+          <label>Verse Number</label>
+          <input type="text" name="verse">
+        </div>
+        <div class="inputContent">
+          <label>Content</label>
+          <textarea name="content"></textarea>
+        </div><?php require_once $_SERVER['DOCUMENT_ROOT'] . '/php/makeTopics.php'?>
+        <div class="inputCustom">
+          <label>Custom Topic</label>
+          <input type="text" name="topicArray[]">
+        </div>
+        <button onclick="insertScriptureAjax()">Insert Scripture</button>
+        <div class="error"></div>
+      </div>
     </div>
   </body>
 </html>
