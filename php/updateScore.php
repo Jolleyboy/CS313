@@ -52,6 +52,6 @@
   }
   else
   {
-    echo "High Score: $highScore";
+    echo "Score: $score<br/>High Score: $highScore";
   }
 ?>
