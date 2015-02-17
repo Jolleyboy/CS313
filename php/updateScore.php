@@ -20,6 +20,7 @@
     $highScore = $row['highScore'];
     if ($score > $highScore)
     {
+      $highScore = $score;
       $query = "UPDATE player SET score = :score, highScore = :score, isAlive = false WHERE username = :username";
       $stmt = $db->prepare($query);
       $stmt->bindValue(':username', $username, PDO::PARAM_STR);
@@ -45,5 +46,12 @@
       }
     }
   }
-  echo "High Score: $highScore";
+  if ($score == $highScore)
+  {
+    echo "New High Score: $highScore"
+  }
+  else
+  {
+    echo "High Score: $highScore";
+  }
 ?>
