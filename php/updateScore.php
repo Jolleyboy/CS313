@@ -48,7 +48,7 @@
   }
   if ($score == $highScore)
   {
-    echo "New High Score: $highScore"
+    echo "New High Score: $highScore";
   }
   else
   {
