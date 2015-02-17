@@ -20,37 +20,30 @@
     $highScore = $row['highScore'];
     if ($score > $highScore)
     {
-      $query = "UPDATE player SET score = :score, highScore = :score WHERE username = :username";
+      $query = "UPDATE player SET score = :score, highScore = :score, isAlive = false WHERE username = :username";
       $stmt = $db->prepare($query);
       $stmt->bindValue(':username', $username, PDO::PARAM_STR);
       $stmt->bindValue(':score',    $score,    PDO::PARAM_INT);
       $stmt->execute();
 
-      if( $stmt->execute() )
-      {
-        echo "New High Score: " . $score;
-      }
-      else
+      if(!$stmt->execute() )
       {
         print_r($db->errorInfo());
       }
     }
     else
     {
-      $query = "UPDATE player SET score = :score WHERE username = :username";
+      $query = "UPDATE player SET score = :score, isAlive = false WHERE username = :username";
       $stmt = $db->prepare($query);
       $stmt->bindValue(':username', $username, PDO::PARAM_STR);
       $stmt->bindValue(':score',    $score,    PDO::PARAM_INT);
       $stmt->execute();
 
-      if( $stmt->execute() )
-      {
-        echo "Score: " . $score . "\nHigh Score: " . $highScore;
-      }
-      else
+      if(!$stmt->execute() )
       {
         print_r($db->errorInfo());
       }
     }
   }
+  echo "High Score: $highScore";
 ?>
