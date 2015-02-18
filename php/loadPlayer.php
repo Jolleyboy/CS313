@@ -29,7 +29,7 @@
     {
       try 
       {
-        $query = "SELECT hp, warmth, hunger, atk, def, score, fire, isAlive, 
+        $query = "SELECT hp, warmth, hunger, atk, def, score, isAlive, 
                   hoursLived FROM player WHERE username = :username";
         $stmt = $db->prepare($query);
         $stmt->bindValue(':username', $username, PDO::PARAM_STR);
@@ -48,7 +48,7 @@
     {
       try 
       {
-        $query = "SELECT hp, warmth, hunger, atk, def, score, fire, isAlive, 
+        $query = "SELECT hp, warmth, hunger, atk, def, score, isAlive, 
                   hoursLived FROM player WHERE username = 'default'";
         $stmt = $db->prepare($query);
         $stmt->bindValue(':username', $username, PDO::PARAM_STR);

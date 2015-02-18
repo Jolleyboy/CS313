@@ -25,7 +25,7 @@
 
   try {
     $query = "UPDATE player SET hp = :hp, warmth = :warmth, hunger = :hunger, 
-              isAlive = :isAlive, fire = :fire, hoursLived = :hoursLived
+              isAlive = :isAlive, hoursLived = :hoursLived
               WHERE username = :username";
     $stmt = $db->prepare($query);
     $stmt->bindValue(':username', $username, PDO::PARAM_STR);
@@ -33,7 +33,6 @@
     $stmt->bindValue(':warmth', $playerInfo['warmth'], PDO::PARAM_INT);
     $stmt->bindValue(':hunger', $playerInfo['hunger'], PDO::PARAM_INT);
     $stmt->bindParam(':isAlive', $playerInfo['isAlive']);
-    $stmt->bindParam(':fire', $playerInfo['fire']);
     $stmt->bindParam(':hoursLived', $playerInfo['hoursLived']);
     $stmt->execute();
   }

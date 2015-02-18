@@ -23,18 +23,16 @@
     <div ng-controller="displayFood" class="arcticMaster snow5">
       <div class="buttons-display">
         <div class="buttons">
-          <button id="gatherBtn" ng-click="gather(); canGather=false;" title="-2 Food, -2 Water" ng-disabled="!canGather">Gather</button>
           <progress id="gatherProgress" value="{{gatherProgress}}" max="100"></progress><br>
-          <div class="buttons2">
-            <button id="lightFireBtn" ng-click="lightFire()" title="-1 Tinder, -5 Sticks" ng-class="{'hidden': sticks &lt; 5 || tinder &lt; 1 || fire}">Light Fire  </button>
-            <button id="huntBtn" onclick="hunt()" class="hidden"></button>
-            <progress id="huntProgress" class="hidden"></progress>
-            <button id="warmUpBtn" onclick="warmUp()" class="hidden"></button>
-            <progress id="warmUpProgress" class="hidden"></progress>
-            <button id="plantBtn" onclick="plant()" class="hidden"></button>
-            <progress id="plantProgress" class="hidden"></progress>
-            <button id="campBtn" ng-click="camp(); canGather=false;" title="-2 Food, -1 Water" ng-disabled="!canGather" ng-class="{'hidden': !fire}">Camp</button>
-          </div>
+          <button id="gatherBtn" ng-click="gather(); canGather=false;" title="-2 Food, -2 Water" ng-disabled="!canGather">Gather</button>
+          <button id="lightFireBtn" ng-click="lightFire()" title="-1 Tinder, -5 Sticks" ng-class="{'hidden': sticks &lt; 5 || tinder &lt; 1 || fire}">Light Fire  </button>
+          <button id="huntBtn" onclick="hunt()" class="hidden"></button>
+          <progress id="huntProgress" class="hidden"></progress>
+          <button id="campBtn" ng-click="camp(); canGather=false;" title="-2 Food, -1 Water" ng-disabled="!canGather" ng-class="{'hidden': !fire}">Camp</button>
+          <button id="craftBtn" onclick="$('.craftDisplay').fadeIn();" ng-class="{'hidden': !canCraft()}">Craft</button>
+          <button id="meltSnowBtn" ng-click="meltSnow()" ng-class="{'hidden': !pot || !fire}">Melt Snow</button>
+          <button id="plantSeedBtn" ng-click="plantSeed()" ng-class="{'hidden': seeds &lt; 5}">Plant Farm</button>
+          <button id="chopWoodBtn" ng-click="chopWood()" ng-class="{'hidden': !hatchet}">Chop Wood</button>
         </div>
         <div class="display">
           <div ng-class="{'invisible': food &lt;= 0}" class="food">Food: {{food}}</div>
@@ -45,7 +43,19 @@
           <div ng-class="{'invisible': barkStrips &lt;= 0}" class="barkStrips">Strips of Bark: {{barkStrips}}</div>
           <div ng-class="{'invisible': tinder &lt;= 0}" class="tinder">Tinder: {{tinder}}</div>
           <div ng-class="{'invisible': leather &lt;= 0}" class="leather">Leather: {{leather}}</div>
+          <div ng-class="{'invisible': sheetMetal &lt;= 0}" class="sheetMetal">Sheet Metal: {{sheetMetal}}</div>
+          <div ng-class="{'invisible': farmPlots &lt;= 0}" class="farmPlots">Farm Plots: {{farmPlots}}</div>
+          <div ng-class="{'invisible': !pot}" class="pot">Pot: 1</div>
+          <div ng-class="{'invisible': !hatchet}" class="hatchet">Hatchet: 1</div>
           <div ng-class="{'invisible': !fire}" class="fire">Your campfire is burning.</div>
+        </div>
+        <div class="craftDisplay">
+          <h1>Craft</h1>
+          <div class="craftButtons">
+            <button id="craftPotBtn" ng-click="craftPot();" ng-class="{'hidden': !canCraftPot()}">Craft Pot</button>
+            <button id="craftPotBtn" ng-click="craftHatchet();" ng-class="{'hidden': !canCraftHatchet()}">Craft Hatchet</button>
+          </div>
+          <input id="closeCraftBtn" type="button" onclick="$('.craftDisplay').hide();" value="Close craft">
         </div>
       </div>
       <div class="console"></div>

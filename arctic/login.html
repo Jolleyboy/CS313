@@ -25,13 +25,25 @@
     </script>
   </head>
   <body>
-    <div class="loginMaster">
+    <header class="mainHeader">
+      <div class="topbar">    <a href="/" class="title"></a>
+        <section id="wrapper">
+          <div class="smiley floatleft">
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+            <div class="smile"></div>
+          </div>
+        </section>
+        <h1>Login to Arctic Winter</h1>
+      </div>
+    </header><br>
+    <div class="loginMaster">   
       <div class="loginDiv">
         <h1>Login</h1><br>
         <label>Account Name:</label>
-        <input type="text" name="username">
+        <input type="text" name="username" placeholder="Account Name">
         <label>Password:</label>
-        <input type="password" name="password" onchange="loginAjax();"><br><br><br><br>
+        <input type="password" name="password" onchange="loginAjax();" placeholder="Password"><span>Don't have an account? <a href="arctic/login.html#" class="signUp" onclick="$('.registerDiv').fadeIn();")> Sign Up </a></span>
         <button id="loginBtn" onclick="loginAjax();">Login </button>
       </div>
       <div class="registerDiv">
@@ -39,10 +51,12 @@
         <label>Account Name:</label>
         <input type="text" name="username" placeholder="Account Name">
         <label>Password:</label>
-        <input type="password" name="password" placeholder="Password">
+        <input id="password" type="password" name="password" placeholder="Password" onkeyup="passwordMeetsRequirements( $('#password').val() )">
+        <label>Re-Enter Password:</label>
+        <input id="password2" type="password" name="password2" placeholder="Password" onkeyup="validatePassword()">
         <label>Player Name:</label>
-        <input type="text" name="playername" placeholder="Player Name"><br><br><br><br><br>
-        <button id="registerBtn" onclick="registerAjax();">Register</button>
+        <input type="text" name="playername" placeholder="Player Name">
+        <button id="registerBtn" onclick="if (validatePassword()) {registerAjax()};">Register</button>
       </div>
       <div class="loginResults"></div>
     </div>
