@@ -1,3 +1,3 @@
-# Jolley's Site
+# Web Engineering 2 - Server side development
 
-My game, Artic Winter, is starting to shape up! See if you can beat my high score.
+See my work at http://cs313.jcjolley.com
