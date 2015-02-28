@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="todoq">
+  <head>
+    <title>ToDoQ</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/all.js"></script>
+  </head>
+  <body ng-controller="todoqCtrl">
+    <div class="header">
+      <div class="topbar"><span class="title">ToDoQ</span>
+        <div class="settings">Settings filler</div>
+      </div>
+    </div>
+    <div class="master">
+      <h3 ng-if="!tdq.array[0]" class="startMessage">Insert your first todo item below</h3>
+      <div class="topItem">
+        <div class="checkbox">
+          <input id="topItemCheckbox" ng-if="tdq.array[0]" type="checkbox" name="topItemCheckbox" ng-checked="false" ng-click="congratulate()">
+        </div>
+        <h3 ng-if="tdq.array[0]" class="displayTopItem">{{tdq.array[0].msg}}</h3>
+      </div>
+      <div ng-if="todo.msg" class="currentItem">
+        <h3>New task</h3><span>{{todo.msg}}</span><span>{{todo.priority}}</span>
+      </div>
+      <div class="newItem"> 
+        <h3>Input a task</h3>
+        <h3>Priority level</h3>
+        <div class="input">
+          <input type="text" name="newItem" id="newItem" placeholder="What's next?" ng-model="todo.msg">
+        </div>
+        <div class="radio">
+          <div class="radioGroup">
+            <label>1</label>
+            <input type="radio" name="priority" ng-model="todo.priority" value="1" checked="checked">
+          </div>
+          <div class="radioGroup">
+            <label>2</label>
+            <input type="radio" name="priority" ng-model="todo.priority" value="2">
+          </div>
+          <div class="radioGroup">
+            <label>3</label>
+            <input type="radio" name="priority" ng-model="todo.priority" value="3">
+          </div>
+          <div class="radioGroup">
+            <label>4</label>
+            <input type="radio" name="priority" ng-model="todo.priority" value="4">
+          </div>
+          <div class="radioGroup">
+            <label>5</label>
+            <input type="radio" name="priority" ng-model="todo.priority" value="5">
+          </div>
+        </div>
+        <button id="newItemBtn" ng-click="insertItem()">Add it to the list</button>
+      </div>
+      <div class="congratulate hidden">
+        <p>Good Work!</p>
+        <button ng-click="tdq.removeTop()">Ok</button>
+      </div>
+    </div>
+  </body>
+</html>
