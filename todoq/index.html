@@ -7,54 +7,82 @@
   </head>
   <body ng-controller="todoqCtrl">
     <div class="header">
-      <div class="topbar"><span class="title">ToDoQ</span>
-        <div class="settings">Settings filler</div>
+      <div class="topbar"><span class="title">TodoQ</span>
+        <div class="settings"><img src="settings.png" onmouseover="$('.settingsMenu').show()">
+          <div onmouseout="$('.settingsMenu').hide()" class="settingsMenu hidden">
+            <ul>Settings
+              <li ng-click="getSettings()">Edit tasks</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div class="master">
       <h3 ng-if="!tdq.array[0]" class="startMessage">Insert your first todo item below</h3>
-      <div class="topItem">
+      <div ng-click="congratulate()" class="topItem">
         <div class="checkbox">
           <input id="topItemCheckbox" ng-if="tdq.array[0]" type="checkbox" name="topItemCheckbox" ng-checked="false" ng-click="congratulate()">
         </div>
         <h3 ng-if="tdq.array[0]" class="displayTopItem">{{tdq.array[0].msg}}</h3>
       </div>
       <div ng-if="todo.msg" class="currentItem">
-        <h3>New task</h3><span>{{todo.msg}}</span><span>{{todo.priority}}</span>
+        <h4>Is this the right todo item?</h4><span class="currentMsg">{{todo.msg}}</span><span class="currentPriority">{{todo.priority}}</span>
       </div>
       <div class="newItem"> 
-        <h3>Input a task</h3>
-        <h3>Priority level</h3>
         <div class="input">
-          <input type="text" name="newItem" id="newItem" placeholder="What's next?" ng-model="todo.msg">
+          <h3>Input a task</h3>
+          <input id="newItem" type="text" name="newItem" placeholder="	What's next?" ng-model="todo.msg">
         </div>
         <div class="radio">
+          <h3>Priority level</h3>
           <div class="radioGroup">
-            <label>1</label>
-            <input type="radio" name="priority" ng-model="todo.priority" value="1" checked="checked">
+            <label>1</label><br>
+            <input type="radio" name="priority" ng-model="todo.priority" value="1" ng-checked="true">
           </div>
           <div class="radioGroup">
-            <label>2</label>
+            <label>2</label><br>
             <input type="radio" name="priority" ng-model="todo.priority" value="2">
           </div>
           <div class="radioGroup">
-            <label>3</label>
+            <label>3</label><br>
             <input type="radio" name="priority" ng-model="todo.priority" value="3">
           </div>
           <div class="radioGroup">
-            <label>4</label>
+            <label>4</label><br>
             <input type="radio" name="priority" ng-model="todo.priority" value="4">
           </div>
           <div class="radioGroup">
-            <label>5</label>
+            <label>5</label><br>
             <input type="radio" name="priority" ng-model="todo.priority" value="5">
           </div>
         </div>
-        <button id="newItemBtn" ng-click="insertItem()">Add it to the list</button>
+        <button id="newItemBtn" ng-click="insertItem(); todo.msg = ''">Add it to the list</button>
       </div>
       <div class="congratulate hidden">
         <p>Good Work!</p>
         <button ng-click="tdq.removeTop()">Ok</button>
+      </div>
+      <div class="settingsContent hidden">
+        <h1 onclick="$('.settingsContent').fadeOut();" class="close">X</h1><br>
+        <div class="tasks">
+          <div class="tasksHeader">
+            <div class="taskDescription">Task</div>
+            <div class="taskPriority">Priority</div>
+            <div class="taskRemove">Remove</div>
+          </div>
+          <div ng-repeat="(index, task) in tdq.array" class="task">
+            <div class="taskDescription">{{task.msg}}</div>
+            <div class="taskPriority">{{task.priority}}</div>
+            <div ng-click="tdq.remove(task)" style="color:red" class="taskRemove">X</div>
+          </div>
+        </div>
+      </div>
+      <div class="splash">
+        <div class="header">
+          <div class="topbar"><span class="title">TodoQ</span></div>
+        </div>
+        <h1>TodoQ</h1>
+        <h3>Getting things done,<br/>one thing at a time.</h3>
       </div>
     </div>
   </body>
