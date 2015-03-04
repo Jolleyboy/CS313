@@ -8,8 +8,8 @@
   <body ng-controller="todoqCtrl">
     <div class="header">
       <div class="topbar"><span class="title">TodoQ</span>
-        <div class="settings"><img src="settings.png" onmouseover="$('.settingsMenu').show()">
-          <div onmouseout="$('.settingsMenu').hide()" class="settingsMenu hidden">
+        <div class="settings"><img src="settings.png" onclick="$('.settingsMenu').show()" onmouseover="$('.settingsMenu').show()">
+          <div onmouseleave="$('.settingsMenu').hide()" class="settingsMenu hidden">
             <ul>Settings
               <li ng-click="getSettings()">Edit tasks</li>
             </ul>
